@@ -11,6 +11,7 @@
 - flatpak:
   - app/com.discordapp.Discord/x86_64/stable
   - Zoom
+  - flathub/org.videolan.VLC
 - link:
     ~/.oh-my-zsh: ohmyzsh
 - clean: ['~']
