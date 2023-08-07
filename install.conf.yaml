@@ -9,9 +9,11 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 - flatpak:
-  - app/com.discordapp.Discord/x86_64/stable
+  - com.discordapp.Discord
   - Zoom
-  - flathub/org.videolan.VLC
+  - "org.videolan.VLC"
+  - "org.signal.Signal"
+  - "com.spotify.Client"
 - link:
     ~/.oh-my-zsh: ohmyzsh
 - clean: ['~']

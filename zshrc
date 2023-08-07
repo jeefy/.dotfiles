@@ -74,6 +74,15 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+if [ ! -e /tmp/dotfiles ]; then
+    cd ~/.dotfiles
+    git fetch
+    if [[ $(git diff main origin/main | wc -l) -ne 0 ]]; then
+        git pull origin main
+    fi
+    touch /tmp/dotfiles
+fi
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
