@@ -75,10 +75,20 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 if [ ! -e /tmp/dotfiles ]; then
+    echo "Fresh boot, doing some house cleaning";
     cd ~/.dotfiles
     git fetch
     if [[ $(git diff main origin/main | wc -l) -ne 0 ]]; then
+        echo "Updating dotfiles";
         git pull origin main
+        echo "Done updating dotfiles";
+        echo "Installing dotfiles/apps";
+        sudo ./install -p dotbot-flatpak/flatpak.py
+        echo "Done installing dotfiles/apps";
+        echo "Final updates";
+        just update
+        echo "Complete. Bluefin is ready to go!";
+        cd ~
     fi
     touch /tmp/dotfiles
 fi
@@ -108,3 +118,5 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export PATH=$PATH:$HOME/.dotfiles/go/bin
