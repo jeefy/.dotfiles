@@ -88,8 +88,8 @@ if [ ! -e /tmp/dotfiles ]; then
         echo "Final updates";
         just update
         echo "Complete. Bluefin is ready to go!";
-        cd ~
     fi
+    cd ~
     touch /tmp/dotfiles
 fi
 
