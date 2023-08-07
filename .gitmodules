@@ -2,3 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "dotbot-flatpak"]
+	path = dotbot-flatpak
+	url = https://github.com/DrDynamic/dotbot-flatpak.git
