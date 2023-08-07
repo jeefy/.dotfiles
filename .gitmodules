@@ -5,3 +5,6 @@
 [submodule "dotbot-flatpak"]
 	path = dotbot-flatpak
 	url = https://github.com/DrDynamic/dotbot-flatpak.git
+[submodule "ohmyzsh"]
+	path = ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh/

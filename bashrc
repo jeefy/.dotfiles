@@ -27,4 +27,3 @@ fi
 
 unset rc
 
-eval "$(starship init bash)"
