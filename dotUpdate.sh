@@ -11,11 +11,9 @@ if [ ! -e /tmp/dotfiles ]; then
         echo "Installing dotfiles/apps";
         sudo ./install -p dotbot-flatpak/flatpak.py
         echo "Done installing dotfiles/apps";
-        echo "Final updates";
-        just update
-        just assemble
-        echo "Complete. Bluefin is ready to go!";
     fi
+    echo "Complete. Bluefin is ready to go!";
+
     cd ~ || exit
     touch /tmp/dotfiles
 fi
