@@ -74,8 +74,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-source ~/.dotfiles/dotUpdate.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -102,4 +100,12 @@ source ~/.dotfiles/dotUpdate.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export KUBECTX_IGNORE_FZF=1
+
+alias kns=kubens
+alias kctx=kubectx
+
 export PATH=$PATH:$HOME/.dotfiles/go/bin
+eval "$(/var/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+source ~/.dotfiles/dotUpdate.sh

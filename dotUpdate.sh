@@ -12,6 +12,14 @@ if [ ! -e /tmp/dotfiles ]; then
         sudo ./install -p dotbot-flatpak/flatpak.py
         echo "Done installing dotfiles/apps";
     fi
+
+    echo "Ensuring dependencies";
+    sudo apt update
+    sudo apt install build-essential
+    
+    echo "Updating brew";
+    brew update
+
     echo "Complete. Bluefin is ready to go!";
 
     cd ~ || exit
