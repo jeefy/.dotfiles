@@ -13,11 +13,15 @@ podmansh-dev:
   sudo mkdir -p /etc/containers/systemd/users/${UID}
   sudo cp ~/.dotfiles/podmansh.container /etc/containers/systemd/users/${UID}/podmansh.container
   sudo lchsh $USER "/usr/bin/podmansh -c zsh"
+  systemctl --user start podman.socket
+  loginctl enable-linger $(whoami)
+
   podman pull ghcr.io/ublue-os/ubuntu-toolbox:latest
   
   systemctl --user daemon-reload
   systemctl --user stop podmansh.service
   systemctl --user start podmansh.service
+  
   @echo "Shell now switched to podmansh. Spawn a new terminal to get going!"
   @echo "By default, the shell will be Bash. To override it, create ~/.profile with your preferred shell"
   @echo "Note: That shell must exist in the toolbox!"

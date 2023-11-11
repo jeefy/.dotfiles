@@ -1,3 +1,5 @@
+export TERM=xterm
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -108,4 +110,5 @@ alias kctx=kubectx
 export PATH=$PATH:$HOME/.dotfiles/go/bin
 eval "$(/var/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+source <(kubectl completion zsh)
 source ~/.dotfiles/dotUpdate.sh

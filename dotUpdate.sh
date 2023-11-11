@@ -15,13 +15,18 @@ if [ ! -e /tmp/dotfiles ]; then
 
     echo "Ensuring dependencies";
     sudo apt update
-    sudo apt install build-essential
+    sudo apt install -y build-essential gcc
     
     echo "Updating brew";
     brew update
+    brew upgrade
+    brew install docker
+
 
     echo "Complete. Bluefin is ready to go!";
 
     cd ~ || exit
     touch /tmp/dotfiles
 fi
+
+export DOCKER_HOST=unix:///var/run/podman/podman.sock

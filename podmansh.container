@@ -2,6 +2,14 @@
 Description=The Podmansh container
 After=local-fs.target
 
+[Service]
+# Restart service when sleep finishes
+Restart=always
+# Extend Timeout to allow time to pull the image
+TimeoutStartSec=900
+# Ensure there's a userland podman.sock
+ExecStartPre=/bin/systemctl --user enable podman.socket
+
 [Container]
 Image=ghcr.io/ublue-os/ubuntu-toolbox:latest
 ContainerName=podmansh
@@ -25,6 +33,7 @@ Volume=/var/log/journal
 Volume=/run/user/%U:/run/user/%U:rslave
 Volume=/etc/hosts:/etc/hosts
 Volume=/etc/resolv.conf:/etc/resolv.conf
+Volume=/run/user/1000/podman/podman.sock:/var/run/podman/podman.sock
 
 Environment=ENV=%h/.profile
 

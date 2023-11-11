@@ -7,14 +7,13 @@
     ~/.justfile: justfile
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [wget https://go.dev/dl/go1.20.7.linux-amd64.tar.gz, Downloading go]
-  - [rm -rf go, Removing old go]
-  - [tar -C . -xzf go1.20.7.linux-amd64.tar.gz, Extracting go]
-  - [rm -f go1.20.7.linux-amd64.tar.gz, Removing go tar]
+  - [sudo apt update, Updating apt]
+  - [sudo apt upgrade -y, Upgrading apt]
+  - [sudo apt install gcc, Installing gcc]
   - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"]
   - [sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew/Homebrew]
   - [chmod u+w /home/linuxbrew/.linuxbrew/Homebrew]
-  - [brew install kubectx]
+  - [brew install kubectx kubebuilder]
 
 - link:
     ~/.oh-my-zsh: ohmyzsh
