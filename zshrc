@@ -108,7 +108,8 @@ alias kns=kubens
 alias kctx=kubectx
 
 export PATH=$PATH:$HOME/.dotfiles/go/bin
-eval "$(/var/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 source <(kubectl completion zsh)
 source ~/.dotfiles/dotUpdate.sh

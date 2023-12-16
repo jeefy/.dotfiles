@@ -13,15 +13,15 @@ if [ ! -e /tmp/dotfiles ]; then
         echo "Done installing dotfiles/apps";
     fi
 
-    echo "Ensuring dependencies";
-    sudo apt update
-    sudo apt install -y build-essential gcc
+    if [[ $(cat /etc/os-release | grep -c "Ubuntu") -ne 0 ]]; then
+        echo "Ubuntu detected, installing Ubuntu specific packages";
+        sudo apt update
+        sudo apt install -y build-essential gcc
+    fi
     
     echo "Updating brew";
     brew update
     brew upgrade
-    brew install docker
-
 
     echo "Complete. Bluefin is ready to go!";
 
@@ -29,4 +29,4 @@ if [ ! -e /tmp/dotfiles ]; then
     touch /tmp/dotfiles
 fi
 
-export DOCKER_HOST=unix:///var/run/podman/podman.sock
+export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock

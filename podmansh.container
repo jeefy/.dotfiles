@@ -34,7 +34,10 @@ Volume=/run/user/%U:/run/user/%U:rslave
 Volume=/etc/hosts:/etc/hosts
 Volume=/etc/resolv.conf:/etc/resolv.conf
 Volume=/run/user/1000/podman/podman.sock:/var/run/podman/podman.sock
+Volume=/tmp/.X11-unix:/tmp/.X11-unix
+Volume=/run/user/%U/gdm/Xauthority:/run/user/%U/gdm/Xauthority
 
+Environment=XAUTHORITY=/run/user/%U/gdm/Xauthority
 Environment=ENV=%h/.profile
 
 PodmanArgs=--env-host

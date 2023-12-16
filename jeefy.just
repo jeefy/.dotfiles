@@ -12,7 +12,11 @@ shutdown: update-dotfiles update assemble
 podmansh-dev:
   sudo mkdir -p /etc/containers/systemd/users/${UID}
   sudo cp ~/.dotfiles/podmansh.container /etc/containers/systemd/users/${UID}/podmansh.container
-  sudo lchsh $USER "/usr/bin/podmansh -c zsh"
+  
+  @echo "Skipping `sudo lchsh $USER "/usr/bin/podmansh -c zsh`"
+  @echo "Please run it manually if you want to use podmansh as your default shell"
+  @echo "Currently we suggest using `prompt` as the container-terminal of choice"
+  
   systemctl --user start podman.socket
   loginctl enable-linger $(whoami)
 
@@ -33,6 +37,10 @@ podmansh-dev:
   @echo "     \"args\": [\"-c\", \"cd \${workspaceFolder}; exec zsh\"]"
   @echo "  }"
   @echo "}"
+  @echo "---"
+  @echo "Please make sure you have the following environment variable set WITHIN the container:"
+  @echo "---"
+  @echo "export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock"
   @echo "---"
   @echo "Happy Podmansh'ing!"
 

@@ -2,27 +2,46 @@
 
 - link:
     ~/.profile: profile
+    ~/.justfile: justfile
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
-    ~/.justfile: justfile
+    ~/.oh-my-zsh: ohmyzsh
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [sudo apt update, Updating apt]
   - [sudo apt upgrade -y, Upgrading apt]
-  - [sudo apt install gcc, Installing gcc]
-  - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"]
-  - [sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew/Homebrew]
-  - [chmod u+w /home/linuxbrew/.linuxbrew/Homebrew]
-  - [brew install kubectx kubebuilder]
+  - [sudo apt install -y build-essential, Installing build-essential]
+  - [flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo]
+  - [NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"]
+  - [eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"]
+  - [export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin]
 
-- link:
-    ~/.oh-my-zsh: ohmyzsh
-    ~/go: go
 - flatpak:
-  - com.discordapp.Discord
-  - Zoom
-  - "org.videolan.VLC"
-  - "org.signal.Signal"
-  - "com.spotify.Client"
+  - --user logseq
+  - --user com.discordapp.Discord
+  - --user Zoom
+  - --user "org.videolan.VLC"
+  - --user "org.signal.Signal"
+  - --user "com.spotify.Client"
+  - --user "com.valvesoftware.Steam.CompatibilityTool.Proton-GE"
+  - --user "la.ogri.strongbox"
+  - --user --from https://nightly.gnome.org/repo/appstream/org.gnome.Prompt.Devel.flatpakref
+- brew:
+  - gcc
+  - ca-certificates
+  - docker
+  - docker-completion
+  - gmp
+  - go
+  - isl
+  - kubebuilder
+  - kubectx
+  - kubernetes-cli
+  - libmpc
+  - lz4
+  - mpdecimal
+  - mpfr
+  - pkg-config
+  - xz
 - clean: ['~']
 
