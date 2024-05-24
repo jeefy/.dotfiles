@@ -1,5 +1,6 @@
 [user]
 	name = Jeffrey Sica
 	email = me@jeefy.dev
-[credential]
-	helper = "!f() { /var/home/jeefy/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node /tmp/vscode-remote-containers-9f6556f6-cf85-4d1b-9b5d-b681f78daa26.js git-credential-helper $*; }; f"
+
+[format]
+	signoff = true
