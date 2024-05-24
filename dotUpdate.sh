@@ -13,20 +13,10 @@ if [ ! -e /tmp/dotfiles ]; then
         echo "Done installing dotfiles/apps";
     fi
 
-    if [[ $(cat /etc/os-release | grep -c "Ubuntu") -ne 0 ]]; then
-        echo "Ubuntu detected, installing Ubuntu specific packages";
-        sudo apt update
-        sudo apt install -y build-essential gcc
-    fi
-    
-    echo "Updating brew";
-    brew update
-    brew upgrade
+    ujust update
 
     echo "Complete. Bluefin is ready to go!";
 
     cd ~ || exit
     touch /tmp/dotfiles
 fi
-
-export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock

@@ -106,6 +106,7 @@ export KUBECTX_IGNORE_FZF=1
 
 alias kns=kubens
 alias kctx=kubectx
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 export PATH=$PATH:$HOME/.dotfiles/go/bin
 
