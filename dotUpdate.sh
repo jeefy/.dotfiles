@@ -15,6 +15,7 @@ if [ ! -e /tmp/dotfiles ]; then
     fi
 
     brew bundle dump --file=~/.dotfiles/Brewfile
+    flatpak list --app -u --columns=application > ~/.dotfiles/Flatfile
     ujust update
 
     echo "Complete. Bluefin is ready to go!";
