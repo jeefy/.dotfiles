@@ -11,8 +11,10 @@ if [ ! -e /tmp/dotfiles ]; then
         echo "Installing dotfiles/apps";
         sudo ./install -p dotbot-flatpak/flatpak.py
         echo "Done installing dotfiles/apps";
+        brew bundle --file=~/.dotfiles/Brewfile
     fi
 
+    brew bundle dump --file=~/.dotfiles/Brewfile
     ujust update
 
     echo "Complete. Bluefin is ready to go!";
