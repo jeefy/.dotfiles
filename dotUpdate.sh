@@ -9,15 +9,17 @@ if [ ! -e /tmp/dotfiles ]; then
         git pull origin main
         echo "Done updating dotfiles";
         echo "Installing dotfiles/apps";
-        sudo ./install -p dotbot-flatpak/flatpak.py
         echo "Done installing dotfiles/apps";
+        flatpak install -u "$(cat ~/.dotfiles/Flatfile)"
         brew bundle --file=~/.dotfiles/Brewfile
+        cat ~/.dotfiles/CodeExtensionsfile | xargs -L 1 echo code --install-extension
     fi
 
     ujust update
 
     brew bundle dump --force --file=~/.dotfiles/Brewfile
     flatpak list --app -u --columns=application > ~/.dotfiles/Flatfile
+    code --list-extensions > ~/.dotfiles/CodeExtensionsfile
     git add .
     git commit -m "auto-update"
     git push origin main
