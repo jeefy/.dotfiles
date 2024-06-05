@@ -15,7 +15,7 @@ if [ ! -e /tmp/dotfiles ]; then
         cat ~/.dotfiles/CodeExtensionsfile | xargs -L 1 echo code --install-extension
     fi
 
-    /usr/bin/topgrade --config /usr/share/ublue-os/topgrade.toml --disable=oh-my-zsh
+    /usr/bin/topgrade --config /usr/share/ublue-os/topgrade.toml
 
     brew bundle dump --force --file=~/.dotfiles/Brewfile
     flatpak list --app -u --columns=application > ~/.dotfiles/Flatfile
