@@ -14,9 +14,13 @@ if [ ! -e /tmp/dotfiles ]; then
         brew bundle --file=~/.dotfiles/Brewfile
     fi
 
-    brew bundle dump --file=~/.dotfiles/Brewfile
-    flatpak list --app -u --columns=application > ~/.dotfiles/Flatfile
     ujust update
+
+    brew bundle dump --force --file=~/.dotfiles/Brewfile
+    flatpak list --app -u --columns=application > ~/.dotfiles/Flatfile
+    git add .
+    git commit -m "auto-update"
+    git push origin main
 
     echo "Complete. Bluefin is ready to go!";
 
