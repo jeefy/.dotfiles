@@ -109,6 +109,7 @@ alias kctx=kubectx
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 export PATH=$PATH:$HOME/.dotfiles/go/bin
+export PATH=$PATH:$HOME/.local/bin
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
