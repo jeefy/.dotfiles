@@ -1,16 +1,31 @@
+- defaults:
+    link:
+      relink: true
+
 - clean: ['~']
 
 - link:
     ~/.profile: profile
-    ~/.justfile: justfile
-    ~/.zshrc: zshrc
+    ~/.zshrc:
+      force: true
+      path: zshrc
     ~/.gitconfig: gitconfig
-    ~/.oh-my-zsh: ohmyzsh
+    ~/.oh-my-zsh:
+      force: true
+      path: ohmyzsh
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo]
-  - [NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"]
-  - [eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"]
-  - [export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin]
-  - [brew bundle install --file=~/.dotfiles/Brewfile]
-  - [flatpak install -u $(cat ~/.dotfiles/Flatfile)]
+  - [flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo, Adding FlatHub repo]
+  - command: brew bundle install --file=~/.dotfiles/Brewfile
+    description: Restoring from Brewfile
+    stdout: true
+    stderr: true
+  - command: flatpak install -y -u $(cat ~/.dotfiles/Flatfile)
+    stdout: true
+    stderr: true
+    description: Restoring from Flatfile
+  - command: cat ~/.dotfiles/CodeExtensionsfile | xargs -L 1 echo code --install-extension
+    description: Restoring Code Extensions
+    stdout: true
+    stderr: true

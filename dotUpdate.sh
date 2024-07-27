@@ -9,10 +9,10 @@ if [ ! -e /tmp/dotfiles ]; then
         git pull origin main
         echo "Done updating dotfiles";
         echo "Installing dotfiles/apps";
-        echo "Done installing dotfiles/apps";
-        flatpak install -u "$(cat ~/.dotfiles/Flatfile)"
         brew bundle --file=~/.dotfiles/Brewfile
+        flatpak install -y -u "$(cat ~/.dotfiles/Flatfile)"
         cat ~/.dotfiles/CodeExtensionsfile | xargs -L 1 echo code --install-extension
+        echo "Done installing dotfiles/apps";
     fi
 
     /usr/bin/topgrade --config /usr/share/ublue-os/topgrade.toml --disable=shell
