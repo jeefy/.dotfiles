@@ -7,7 +7,7 @@ brew "crane"
 brew "direnv"
 brew "docker"
 brew "eza"
-brew "fd"
+brew "fd", link: false
 brew "gcc"
 brew "gh"
 brew "glab"
