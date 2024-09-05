@@ -1,4 +1,5 @@
 tap "homebrew/bundle"
+tap "homebrew/services"
 tap "linuxkit/linuxkit"
 brew "atuin"
 brew "bat"
@@ -19,6 +20,7 @@ brew "kubectx"
 brew "lima"
 brew "mage"
 brew "oci-cli"
+brew "ollama", restart_service: true
 brew "openjdk"
 brew "ripgrep"
 brew "ugrep"
