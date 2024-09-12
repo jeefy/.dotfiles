@@ -24,7 +24,9 @@ brew "ollama", restart_service: true
 brew "openjdk"
 brew "ripgrep"
 brew "ugrep"
+brew "youtube-dl"
 brew "yq"
+brew "yt-dlp"
 brew "zoxide"
 brew "linuxkit/linuxkit/linuxkit", args: ["HEAD"]
 vscode "dbaeumer.vscode-eslint"
