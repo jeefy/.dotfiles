@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "linuxkit/linuxkit"
+brew "argocd"
 brew "atuin"
 brew "bat"
 brew "cilium-cli"
