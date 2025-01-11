@@ -21,7 +21,7 @@ brew "kubectx"
 brew "lima"
 brew "mage"
 brew "oci-cli"
-brew "ollama", restart_service: true
+brew "ollama", restart_service: :changed
 brew "openjdk"
 brew "ripgrep"
 brew "ugrep"
