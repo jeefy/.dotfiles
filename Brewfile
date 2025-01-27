@@ -11,6 +11,7 @@ brew "docker"
 brew "eza"
 brew "fd", link: false
 brew "gcc"
+brew "gcc@11", link: false
 brew "gh"
 brew "glab"
 brew "helm"
