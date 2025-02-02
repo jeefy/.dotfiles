@@ -11,7 +11,7 @@ brew "docker"
 brew "eza"
 brew "fd", link: false
 brew "gcc"
-brew "gcc@11", link: false
+brew "gcc@11"
 brew "gh"
 brew "glab"
 brew "helm"
@@ -25,6 +25,7 @@ brew "oci-cli"
 brew "ollama", restart_service: :changed
 brew "openjdk"
 brew "ripgrep"
+brew "ta-lib"
 brew "ugrep"
 brew "youtube-dl"
 brew "yq"
