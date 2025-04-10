@@ -35,6 +35,7 @@ brew "yt-dlp"
 brew "zoxide"
 brew "linuxkit/linuxkit/linuxkit", args: ["HEAD"]
 vscode "dbaeumer.vscode-eslint"
+vscode "docker.docker"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "github.copilot"
