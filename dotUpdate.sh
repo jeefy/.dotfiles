@@ -15,7 +15,7 @@ if [ ! -e /tmp/dotfiles ]; then
         echo "Done installing dotfiles/apps";
     fi
 
-    /usr/bin/topgrade --config /usr/share/ublue-os/topgrade.toml --disable=shell
+    /usr/bin/topgrade --config /etc/ublue-os/topgrade.toml --disable=shell
 
     brew bundle dump --force --file=~/.dotfiles/Brewfile
     flatpak list --app -u --columns=application > ~/.dotfiles/Flatfile
