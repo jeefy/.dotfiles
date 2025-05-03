@@ -31,6 +31,7 @@ brew "ollama", restart_service: :changed
 brew "openjdk"
 brew "ripgrep"
 brew "ta-lib"
+brew "topgrade"
 brew "ugrep"
 brew "virtctl"
 brew "xmrig"
