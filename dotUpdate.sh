@@ -15,7 +15,7 @@ if [ ! -e /tmp/dotfiles ]; then
         echo "Done installing dotfiles/apps";
     fi
 
-    topgrade --disable=shell
+    topgrade --disable=shell --yes
 
     brew bundle dump --force --file=~/.dotfiles/Brewfile
     flatpak list --app -u --columns=application > ~/.dotfiles/Flatfile
