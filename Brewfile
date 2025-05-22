@@ -15,7 +15,7 @@ brew "dysk"
 brew "eza"
 brew "fd", link: false
 brew "gcc"
-brew "gcc@11"
+brew "gcc@11", link: false
 brew "gh"
 brew "git-lfs"
 brew "glab"
