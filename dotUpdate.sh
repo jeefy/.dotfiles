@@ -20,6 +20,8 @@ if [ ! -e /tmp/dotfiles ]; then
     brew bundle dump --force --file=~/.dotfiles/Brewfile
     flatpak list --app -u --columns=application > ~/.dotfiles/Flatfile
     code --list-extensions > ~/.dotfiles/CodeExtensionsfile
+    dconf dump /org/gnome/Ptyxis/ > .dotfiles/dconf/ptyxis.conf
+    gnome-extensions list --user --active --enabled > ~/.dotfiles/gnome-extensions-list
     git add .
     git commit -m "auto-update"
     git push origin main
