@@ -17,6 +17,18 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo, Adding FlatHub repo]
+  - command: sudo usermod -aG docker $USER
+    description: Add user to docker group
+    stdout: true
+    stderr: true
+  - command: sudo usermod -aG dialout $USER
+    description: Add user to dialout group
+    stdout: true
+    stderr: true
+  - command: sudo usermod -aG tty $USER 
+    description: Add user to tty group
+    stdout: true
+    stderr: true
   - command: brew bundle install --file=~/.dotfiles/Brewfile
     description: Restoring from Brewfile
     stdout: true

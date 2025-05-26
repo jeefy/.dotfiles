@@ -1,7 +1,6 @@
 ```
+ujust devmode
 git clone git@github.com:jeefy/.dotfiles.git
-sudo usermod -aG docker $USER
-sudo bootc switch --enforce-container-sigpolicy ghcr.io/ublue-os/bluefin-dx:stable
 cd .dotfiles && ./install
 ```
 
