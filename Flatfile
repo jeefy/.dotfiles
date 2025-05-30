@@ -9,6 +9,7 @@ com.slack.Slack
 com.spotify.Client
 com.valvesoftware.Steam
 com.vysp3r.ProtonPlus
+dev.goats.xivlauncher
 io.github.Omniaevo.mqtt5-explorer
 it.mijorus.gearlever
 la.ogri.strongbox

@@ -13,7 +13,7 @@ brew "docker"
 brew "docker-compose"
 brew "dysk"
 brew "eza"
-brew "fd", link: false
+brew "fd"
 brew "gcc"
 brew "gcc@11", link: false
 brew "gh"
@@ -32,6 +32,7 @@ brew "node"
 brew "oci-cli"
 brew "ollama", restart_service: :changed
 brew "openjdk"
+brew "ramalama"
 brew "ripgrep"
 brew "shellcheck"
 brew "starship"
