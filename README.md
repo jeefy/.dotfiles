@@ -1,5 +1,6 @@
 ```
 ujust devmode
+sudo rpm-ostree install libudev-devel
 git clone git@github.com:jeefy/.dotfiles.git
 cd .dotfiles && ./install
 ```
