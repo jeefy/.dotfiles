@@ -8,6 +8,9 @@ com.raggesilver.BlackBox
 com.slack.Slack
 com.spotify.Client
 com.valvesoftware.Steam
+com.vysp3r.ProtonPlus
+dev.goats.xivlauncher
+io.github.Omniaevo.mqtt5-explorer
 it.mijorus.gearlever
 la.ogri.strongbox
 net.davidotek.pupgui2
@@ -18,5 +21,6 @@ org.gustavoperedo.FontDownloader
 org.libreoffice.LibreOffice
 org.signal.Signal
 org.videolan.VLC
+tv.plex.PlexDesktop
 us.zoom.Zoom
 xyz.z3ntu.razergenie
