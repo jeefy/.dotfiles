@@ -28,7 +28,6 @@ brew "kubernetes-cli"
 brew "kubectx"
 brew "lima"
 brew "mage"
-brew "node"
 brew "oci-cli"
 brew "ollama", restart_service: :changed
 brew "openjdk"
