@@ -26,4 +26,17 @@ unset rc
 ### bling.sh source start
 test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
 ### bling.sh source end
+export KUBECTX_IGNORE_FZF=1
+
+alias kns=kubens
+alias kctx=kubectx
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+export PATH=$PATH:$HOME/.dotfiles/go/bin
+export PATH=$PATH:$HOME/.local/bin
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+source <(kubectl completion bash)
+
 ~/.dotfiles/dotUpdate.sh
