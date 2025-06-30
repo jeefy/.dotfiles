@@ -114,4 +114,5 @@ export PATH=$PATH:$HOME/.local/bin
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 source <(kubectl completion zsh)
-source ~/.dotfiles/dotUpdate.sh
+
+~/.dotfiles/dotUpdate.sh &> /tmp/dotfiles.log & 
