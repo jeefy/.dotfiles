@@ -39,4 +39,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 source <(kubectl completion bash)
 
-~/.dotfiles/dotUpdate.sh &> /tmp/dotfiles.log & 
+pid=$(~/.dotfiles/dotUpdate.sh > /tmp/dotfiles.log 2>&1 &)

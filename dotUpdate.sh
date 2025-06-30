@@ -33,8 +33,10 @@ else
 
         echo "Complete. Bluefin is ready to go!";
 
-        cd ~ || exit
         touch /tmp/dotfiles
+        
+        cd ~ || rm /tmp/dotfiles.lock; exit
+        
     fi
 
     rm /tmp/dotfiles.lock
