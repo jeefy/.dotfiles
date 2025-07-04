@@ -35,7 +35,7 @@ else
 
         touch /tmp/dotfiles
         
-        cd ~ || rm /tmp/dotfiles.lock; exit
+        cd ~
         
     fi
 

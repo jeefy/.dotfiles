@@ -115,4 +115,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 source <(kubectl completion zsh)
 
-pid=$(~/.dotfiles/dotUpdate.sh > /tmp/dotfiles.log 2>&1 &)
+pid=$(~/.dotfiles/dotUpdate.sh >> /tmp/dotfiles.log 2>&1 &)
