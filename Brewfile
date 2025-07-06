@@ -19,6 +19,7 @@ brew "gcc@11", link: false
 brew "gh"
 brew "git-lfs"
 brew "glab"
+brew "gphoto2"
 brew "hcl2json"
 brew "helm"
 brew "huggingface-cli"

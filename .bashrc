@@ -26,14 +26,17 @@ unset rc
 ### bling.sh source start
 test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
 ### bling.sh source end
-export KUBECTX_IGNORE_FZF=1
 
 alias kns=kubens
 alias kctx=kubectx
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+# Specific to my desktop, Malaz
+alias prepcam="sudo modprobe v4l2loopback exclusive_caps=1 && sudo v4l2loopback-ctl add video3 && pkill gphoto"
+alias dslrcam="gphoto2 --stdout autofocusdrive=1 --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video3"
 
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH=$PATH:$HOME/.dotfiles/go/bin
 export PATH=$PATH:$HOME/.local/bin
+export KUBECTX_IGNORE_FZF=1
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
