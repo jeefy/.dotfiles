@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 alias kns=kubens
 alias kctx=kubectx
 # Specific to my desktop, Malaz
-alias prepcam="sudo modprobe v4l2loopback exclusive_caps=1 && sudo v4l2loopback-ctl add video3 && pkill gphoto"
+alias prepcam="sudo modprobe -r v4l2loopback && sudo modprobe v4l2loopback exclusive_caps=1,1,1,1,1,1,1,1 && sudo v4l2loopback-ctl add video3 && pkill gphoto"
 alias dslrcam="gphoto2 --stdout autofocusdrive=1 --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video3"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
