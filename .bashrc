@@ -42,4 +42,4 @@ export PATH=$PATH:$HOME/.dotfiles/go/bin
 export PATH=$PATH:$HOME/.local/bin
 export KUBECTX_IGNORE_FZF=1
 
-pid=$(~/.dotfiles/dotUpdate.sh > /tmp/dotfiles.log 2>&1 &)
+pid=$(~/.dotfiles/dotUpdate.sh >> /tmp/dotfiles.log 2>&1 &)
