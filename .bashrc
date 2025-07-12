@@ -33,13 +33,13 @@ alias kctx=kubectx
 alias prepcam="sudo modprobe v4l2loopback exclusive_caps=1 && sudo v4l2loopback-ctl add video3 && pkill gphoto"
 alias dslrcam="gphoto2 --stdout autofocusdrive=1 --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video3"
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+source <(kubectl completion bash)
+
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH=$PATH:$HOME/.dotfiles/go/bin
 export PATH=$PATH:$HOME/.local/bin
 export KUBECTX_IGNORE_FZF=1
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-source <(kubectl completion bash)
 
 pid=$(~/.dotfiles/dotUpdate.sh > /tmp/dotfiles.log 2>&1 &)
