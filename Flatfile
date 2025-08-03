@@ -1,3 +1,4 @@
+cc.arduino.IDE2
 com.discordapp.Discord
 com.feaneron.Boatswain
 com.github.zocker_160.SyncThingy
@@ -21,6 +22,7 @@ org.gustavoperedo.FontDownloader
 org.libreoffice.LibreOffice
 org.signal.Signal
 org.videolan.VLC
+org.zealdocs.Zeal
 tv.kodi.Kodi
 tv.plex.PlexDesktop
 us.zoom.Zoom

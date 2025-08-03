@@ -26,11 +26,14 @@ ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode-remote.remote-wsl
 ms-vscode-remote.vscode-remote-extensionpack
+ms-vscode.cmake-tools
+ms-vscode.cpptools
 ms-vscode.live-server
 ms-vscode.makefile-tools
 ms-vscode.remote-explorer
 ms-vscode.remote-server
 ms-vsliveshare.vsliveshare
+platformio.platformio-ide
 redhat.vscode-yaml
 sanjulaganepola.github-local-actions
 shd101wyy.markdown-preview-enhanced
