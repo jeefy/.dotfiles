@@ -14,6 +14,7 @@ brew "docker-compose"
 brew "dysk"
 brew "eza"
 brew "fd"
+brew "llvm"
 brew "gcc"
 brew "gcc@11", link: false
 brew "gh"
