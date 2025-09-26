@@ -114,6 +114,7 @@ source <(kubectl completion zsh)
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH=$PATH:$HOME/.dotfiles/go/bin
+export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.local/bin
 export KUBECTX_IGNORE_FZF=1
 
