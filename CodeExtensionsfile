@@ -8,6 +8,7 @@ github.copilot-chat
 github.vscode-github-actions
 github.vscode-pull-request-github
 golang.go
+google.gemini-cli-vscode-ide-companion
 hashicorp.terraform
 hyunkyunmoon.gzipdecompressor
 kelvin.vscode-sshfs

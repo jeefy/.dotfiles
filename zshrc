@@ -119,3 +119,8 @@ export PATH=$PATH:$HOME/.local/bin
 export KUBECTX_IGNORE_FZF=1
 
 pid=$(~/.dotfiles/dotUpdate.sh >> /tmp/dotfiles.log 2>&1 &)
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/var/home/jeefy/.lmstudio/bin"
+# End of LM Studio CLI section
+
