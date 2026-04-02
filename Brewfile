@@ -1,3 +1,4 @@
+tap "anomalyco/tap"
 tap "charmbracelet/tap"
 tap "hashicorp/tap"
 tap "linuxkit/linuxkit"
