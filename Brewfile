@@ -15,7 +15,7 @@ brew "cilium-cli"
 brew "cmake"
 brew "crane"
 brew "direnv"
-brew "docker"
+brew "docker", link: false
 brew "docker-compose"
 brew "dysk"
 brew "eza"
