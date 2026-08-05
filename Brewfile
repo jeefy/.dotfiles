@@ -4,75 +4,136 @@ tap "hashicorp/tap"
 tap "linuxkit/linuxkit"
 tap "oven-sh/bun"
 tap "ublue-os/tap"
-tap "valkyrie00/bbrew"
+tap "valkyrie00/bbrew", "https://github.com/Valkyrie00/homebrew-bbrew"
+# Run your GitHub Actions locally
 brew "act"
+# GitOps Continuous Delivery for Kubernetes
 brew "argocd"
+# Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
+# Preexec and precmd functions for Bash (like Zsh)
 brew "bash-preexec"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 brew "cilium-cli"
+# Cross-platform make
 brew "cmake"
+# Tool for interacting with remote images and registries
 brew "crane"
+# Load/unload environment variables based on $PWD
 brew "direnv"
+# Pack, ship and run any application as a lightweight container
 brew "docker", link: false
+# Isolated development environments using Docker
 brew "docker-compose"
+# Linux utility to get information on filesystems, like df but better
 brew "dysk"
+# Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Next-gen compiler infrastructure
 brew "llvm"
+# GNU compiler collection
 brew "gcc"
+# GNU compiler collection
 brew "gcc@11", link: false
+# Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
+# GitHub command-line tool
 brew "gh"
+# Git extension for versioning large files
 brew "git-lfs"
+# Open-source GitLab command-line tool
 brew "glab"
+# Command-line interface to libgphoto2
 brew "gphoto2"
+# Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Convert HCL2 to JSON
 brew "hcl2json"
+# Kubernetes package manager
 brew "helm"
+# Client library for huggingface.co hub
 brew "hf"
+# Configurable static site generator
 brew "hugo"
+# Scanning your k8s clusters, diagnosing, and triaging issues in simple English
 brew "k8sgpt"
+# Run local Kubernetes cluster in Docker
 brew "kind"
+# SDK for building Kubernetes APIs using CRDs
 brew "kubebuilder"
+# Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
+# Kubernetes command-line interface
 brew "kubernetes-cli"
+# Linux virtual machines
 brew "lima"
+# Make/rake-like build tool using Go
 brew "mage"
+# Run a Kubernetes cluster locally
 brew "minikube"
+# Oracle Cloud Infrastructure CLI
 brew "oci-cli"
+# Create, run, and share large language models (LLMs)
 brew "ollama", restart_service: :changed
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# AI coding agent, built for the terminal
 brew "opencode"
+# Development kit for the Java programming language
 brew "openjdk"
+# Goal of RamaLama is to make working with AI boring
 brew "ramalama"
+# CLI proxy to minimize LLM token consumption
 brew "rtk"
+# Safe, concurrent, practical language
 brew "rust"
+# Rust toolchain installer
 brew "rustup"
+# Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Stress test a computer system in various selectable ways
 brew "stress-ng"
+# Tools for market analysis
 brew "ta-lib"
+# Very fast implementation of tldr in Rust
 brew "tealdeer"
+# General purpose fuzzy finder TUI
 brew "television"
+# Upgrade all the things
 brew "topgrade"
+# Command-line interface to the freedesktop.org trashcan
 brew "trash-cli"
+# Ultra fast grep with query UI, fuzzy search, archive search, and more
 brew "ugrep"
+# Cross-platform Rust rewrite of the GNU coreutils
 brew "uutils-coreutils"
+# Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Allows for using more advanced kubevirt features
 brew "virtctl"
+# Monero (XMR) CPU miner
 brew "xmrig"
+# Download YouTube videos from the command-line
 brew "youtube-dl"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Feature-rich command-line audio/video downloader
 brew "yt-dlp"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
-brew "hashicorp/tap/packer"
-brew "linuxkit/linuxkit/linuxkit", args: ["HEAD"]
-brew "oven-sh/bun/bun"
-brew "valkyrie00/bbrew/bbrew"
+# Terminal-based AI coding assistant
 cask "claude-code"
+# Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
+# Discover, download, and run local LLMs
 cask "ublue-os/tap/lm-studio-linux"
 vscode "alexcvzz.vscode-sqlite"
 vscode "dbaeumer.vscode-eslint"
@@ -81,7 +142,6 @@ vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "geequlim.godot-tools"
 vscode "george-alisson.html-preview-vscode"
-vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "golang.go"
@@ -192,6 +252,7 @@ flatpak "org.gnome.clocks"
 flatpak "org.gnome.font-viewer"
 flatpak "org.godotengine.Godot"
 flatpak "org.gustavoperedo.FontDownloader"
+flatpak "org.kicad.KiCad"
 flatpak "org.libreoffice.LibreOffice"
 flatpak "org.mozilla.firefox"
 flatpak "org.mozilla.thunderbird_esr"
