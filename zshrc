@@ -105,8 +105,12 @@ source $ZSH/oh-my-zsh.sh
 alias kns=kubens
 alias kctx=kubectx
 # Specific to my desktop, Malaz
-alias prepcam="sudo rmmod v4l2loopback && sudo modprobe v4l2loopback exclusive_caps=1 card_label=\"VirtualDSLR\" && pkill gphoto"
-alias dslrcam="gphoto2 --stdout autofocusdrive=1 --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0"
+# DSLR webcam is now fully automatic (see ~/.local/bin/dslrcam):
+#   - v4l2loopback configured at boot via /etc/modprobe.d/v4l2loopback.conf (/dev/video9, "VirtualDSLR")
+#   - stream auto-starts on camera plug-in (udev: /etc/udev/rules.d/99-dslrcam.rules)
+#     and at login (systemd user unit: dslrcam.service)
+alias dslrcam-log='journalctl --user -u dslrcam -f'
+alias dslrcam-restart='systemctl --user restart dslrcam'
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
