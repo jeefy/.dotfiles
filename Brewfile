@@ -1,5 +1,3 @@
-tap "anomalyco/tap"
-tap "charmbracelet/tap"
 tap "hashicorp/tap"
 tap "linuxkit/linuxkit"
 tap "oven-sh/bun"
@@ -10,7 +8,7 @@ brew "act"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
 # Improved shell history for zsh, bash, fish and nushell
-brew "atuin"
+brew "atuin", link: false
 # Preexec and precmd functions for Bash (like Zsh)
 brew "bash-preexec"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -34,9 +32,9 @@ brew "dysk"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
-brew "fd"
+brew "fd", link: false
 # Next-gen compiler infrastructure
-brew "llvm"
+brew "llvm", link: false
 # GNU compiler collection
 brew "gcc"
 # GNU compiler collection
@@ -124,16 +122,25 @@ brew "xmrig"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
-brew "yq"
+brew "yq", link: false
 # Feature-rich command-line audio/video downloader
 brew "yt-dlp"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Packer
+brew "hashicorp/tap/packer", trusted: true
+# Lightweight Linux distribution tool
+brew "linuxkit/linuxkit/linuxkit", args: ["HEAD"], trusted: true
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun", trusted: true
+# Modern TUI for managing Homebrew packages and casks on macOS and Linux
+brew "valkyrie00/bbrew/bbrew", trusted: true
 # Terminal-based AI coding assistant
 cask "claude-code"
 # Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
-cask "ublue-os/tap/lm-studio-linux"
+# Discover, download, and run local LLMs
+cask "ublue-os/tap/lm-studio-linux", trusted: true
 vscode "alexcvzz.vscode-sqlite"
 vscode "dbaeumer.vscode-eslint"
 vscode "docker.docker"
@@ -275,5 +282,4 @@ krew "virt"
 npm "@modelcontextprotocol/server-puppeteer"
 npm "agent-browser"
 npm "mcp-ssh-manager"
-npm "openclaw"
 npm "pnpm"
