@@ -133,7 +133,7 @@ brew "zoxide"
 cask "claude-code"
 # Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
-cask "lm-studio-linux"
+cask "ublue-os/tap/lm-studio-linux"
 vscode "alexcvzz.vscode-sqlite"
 vscode "dbaeumer.vscode-eslint"
 vscode "docker.docker"
